@@ -211,7 +211,8 @@ config:
 
 **Start.sh**
 
-\#!/usr/bin/bash  
+```
+#!/usr/bin/bash  
   
 REPO_URL="https://github.com/kmenovschikov/netology_devops.git"  
 REPO_DIR="/opt/neto"  
@@ -222,6 +223,7 @@ git clone "\$REPO_URL" "\$REPO_DIR"
   
 echo "Заходим в папку \$REPO_DIR и запускаем docker compose..."  
 (cd "\$REPO_DIR" && docker compose up -d)
+```
 
 **Sudo bash start.ph**
 
