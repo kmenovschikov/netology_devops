@@ -102,6 +102,7 @@ CMD \["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000"\]
 
 **Compose.yaml**
 
+```
 include:  
 - proxy.yaml  
   
@@ -142,9 +143,11 @@ environment:
 - MYSQL_DATABASE=\${MYSQL_DATABASE}  
 - MYSQL_USER=\${MYSQL_USER}  
 - MYSQL_PASSWORD=\${MYSQL_PASSWORD}
+```
 
 **Proxy.yaml**
 
+```
 services:  
   
 reverse-proxy:  
@@ -172,6 +175,7 @@ driver: bridge
 ipam:  
 config:  
 - subnet: 172.120.0.0/24
+```
 
 **Исправить IP-адрес в конфигурации HAproxy.**
 
