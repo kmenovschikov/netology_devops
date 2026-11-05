@@ -1,15 +1,15 @@
-version: '3.8'
 services:
 
   reverse-proxy:
     image: haproxy:2.4
     restart: always
     networks:
-        backend: {}
+      backend:
+        ipv4_address: 172.120.0.15
     ports:
     - "127.0.0.1:8080:8080"
     volumes:
-    - ./haproxy/reverse/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:rw 
+    - ./haproxy/reverse/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:rw
 
   ingress-proxy:
     image: nginx:latest
@@ -24,4 +24,4 @@ networks:
     driver: bridge
     ipam:
      config:
-       - subnet: 172.20.0.0/24
+       - subnet: 172.120.0.0/24
