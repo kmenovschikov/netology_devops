@@ -18,9 +18,10 @@
 
 **.dockerignore**
 
-\_\_pycache\_\_  
-\*.pyc  
-\*.pyo  
+```
+__pycache__  
+*.pyc  
+*.pyo  
 .venv  
 venv  
   
@@ -32,6 +33,7 @@ tmp/
 logs/  
   
 Dockerfile
+```
 
 **Dockerfile.python**
 
